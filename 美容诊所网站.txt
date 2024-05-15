@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>美容诊所</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header, footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+        nav {
+            margin: 0;
+            padding: 1em;
+            text-align: center;
+            background-color: #444;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        .container {
+            padding: 2em;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .responsive-img {
+            max-width: 100%;
+            height: auto;
+        }
+        .grid {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .grid-item {
+            flex: 1 1 calc(33.333% - 2em);
+            margin: 1em;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        form input, form textarea {
+            margin-bottom: 1em;
+            padding: 0.5em;
+            font-size: 1em;
+        }
+        @media (max-width: 768px) {
+            .grid-item {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>欢迎来到我们的美容诊所</h1>
+    </header>
+    <nav>
+        <a href="#about">关于我们</a>
+        <a href="#projects">项目展示</a>
+        <a href="#contact">联系我们</a>
+    </nav>
+    <div class="container">
+        <section id="about">
+            <h2>关于我们</h2>
+            <p>我们是一家位于伦敦的高端美容诊所，致力于为客户提供最优质的美容服务。</p>
+            <img src="你的美容诊所图片.jpg" alt="美容诊所" class="responsive-img">
+        </section>
+        <section id="projects">
+            <h2>项目展示</h2>
+            <div class="grid">
+                <div class="grid-item">
+                    <h3>项目一</h3>
+                    <img src="项目图片1.jpg" alt="项目一" class="responsive-img">
+                    <p>项目一的详细描述。</p>
+                </div>
+                <div class="grid-item">
+                    <h3>项目二</h3>
+                    <img src="项目图片2.jpg" alt="项目二" class="responsive-img">
+                    <p>项目二的详细描述。</p>
+                </div>
+                <div class="grid-item">
+                    <h3>项目三</h3>
+                    <img src="项目图片3.jpg" alt="项目三" class="responsive-img">
+                    <p>项目三的详细描述。</p>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <h2>联系我们</h2>
+            <form id="contactForm">
+                <input type="text" name="name" placeholder="你的名字" required>
+                <input type="email" name="email" placeholder="你的邮箱" required>
+                <textarea name="message" rows="5" placeholder="你的信息" required></textarea>
+                <button type="submit">提交</button>
+            </form>
+            <p>地址: 伦敦某地</p>
+            <p>电话: 123-456-7890</p>
+            <p>邮箱: info@yourclinic.com</p>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2024 美容诊所. 保留所有权利.</p>
+        <p>社交媒体链接</p>
+    </footer>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('表单已提交！');
+        });
+    </script>
+</body>
+</html>
